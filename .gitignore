@@ -2,10 +2,10 @@
 #bundle.js
 #bundle.js.map
 .vscode/
-node_modules
-!node_modules/bootstrap
-!node_modules/bootstrap-icons
-!node_modules/bootstrap-icons
+#node_modules
+#!node_modules/bootstrap
+#!node_modules/bootstrap-icons
+#!node_modules/bootstrap-icons
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
