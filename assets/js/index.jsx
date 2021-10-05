@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+//import 'bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
 function Root() {
@@ -11,7 +13,6 @@ function Root() {
         </div>
     );
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.getElementById("main");
