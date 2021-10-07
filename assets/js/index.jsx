@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import NavBar from './navbar'
 import ContactForm from './contact-form'
 import ProjectsModule from './portfolio/projects-module';
-require('dotenv').config();
+//require('dotenv').config();
 
 
 function Root() {
