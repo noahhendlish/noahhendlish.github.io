@@ -2,6 +2,9 @@
 #bundle.js
 #bundle.js.map
 .vscode/
+reCaptchaV3.txt
+.env
+API_KEYS.json
 #node_modules
 #!node_modules/bootstrap
 #!node_modules/bootstrap-icons

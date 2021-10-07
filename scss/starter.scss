@@ -24,14 +24,14 @@
 
 // Toggle global options
 
-$enable-gradients: true;
-$enable-shadows: true;
+//$enable-gradients: true;
+//$enable-shadows: true;
 
 // Customize some defaults
-$body-color: #333;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+//$body-color: #333;
+//$body-bg: #fff;
+//$border-radius: .4rem;
+//$success: #7952b3;
 //$font-stack: Helvetica,sans-serif;
 //$primary-color: rgb(205, 24, 24);
 
@@ -80,15 +80,45 @@ $success: #7952b3;
 // Custom styles
 //
 
-@import "icon-list";
+//@import "icon-list";
 
-body {
+/*body {
   padding: 3rem 1.5rem;
   //font: 100% $font-stack;
   //color: $primary-color;
-}
+}*/
 
 // Style Bootstrap icons
-.bi {
+/*.bi {
   fill: currentColor;
+}*/
+.title{
+  border: 1px solid yellow;
+}
+.content{
+  border: 1px solid black;
+}
+.nav{
+  border: 1px solid green;
+}
+
+
+.email-field-error-msg,
+.name-field-error-msg,
+.message-field-error-msg {
+  margin: 0;
+  padding:0;
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 0.7em;
+  color: #dc3545;
+}
+.form-error-message{
+  min-height: 5px;
+  position: relative;
+}
+.form-control{
+
 }
