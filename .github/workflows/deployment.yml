@@ -12,9 +12,8 @@ jobs:
       steps:
         - uses: actions/checkout@v1
         - name: define formspree key on env
-        - run:  |
-          REACT_APP_FORMSPREE_KEY = ${{ secrets.REACT_APP_FORMSPREE_KEY }}
-          echo REACT_APP_FORMSPREE_KEY
+        - run:  REACT_APP_FORMSPREE_KEY = ${{ secrets.REACT_APP_FORMSPREE_KEY }}
+
 
 
 
