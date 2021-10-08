@@ -20,8 +20,11 @@ jobs:
       environment: github-pages
       steps:
             - name: define formspree key on env
-              with: # Set the secret as an input
-                REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
               env:
                   REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
               run: echo REACT_APP_FORMSPREE_KEY
+
+
+
+#with: # Set the secret as an input
+              #  REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
