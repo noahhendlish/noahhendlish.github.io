@@ -2233,7 +2233,7 @@ function ContactForm() {
 
   var handleOnSubmit = function handleOnSubmit(event) {
     event.preventDefault();
-    var FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY || REACT_APP_FORMSPREE_KEY;
+    var FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY;
 
     if (!validate()) {
       return;
