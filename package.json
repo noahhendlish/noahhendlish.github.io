@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage":"https://github.com/noahhendlish/noahhendlish.github.io",
+
   "scripts": {
     "start": "npm-run-all --parallel watch server webpack",
     "build": "npm run css",
@@ -40,6 +42,7 @@
     "@babel/preset-react": "^7.14.5",
     "@craco/craco": "^6.3.0",
     "@formspree/react": "^2.2.4",
+    "@octokit/core": "^3.5.1",
     "axios": "^0.22.0",
     "babel-loader": "^8.2.2",
     "bootstrap": "^5.1.1",
