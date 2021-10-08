@@ -8,6 +8,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: define formspree key on env
+          uses: actions/checkout@v1
           env:
               REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
 
