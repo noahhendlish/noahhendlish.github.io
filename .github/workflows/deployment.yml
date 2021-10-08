@@ -23,15 +23,10 @@ jobs:
                   node -v
                   npm -v
 
-            - name: define formspree key on env
-              env:
-                REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
-
     deploy:
       runs-on: ubuntu-latest
       environment: github-pages
       steps:
-            - name: deploy
-              env:
-                      REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
+            - name: define formspree key on env
+              env: REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
               run: echo REACT_APP_FORMSPREE_KEY
