@@ -2233,6 +2233,7 @@ function ContactForm() {
 
   var handleOnSubmit = function handleOnSubmit(event) {
     event.preventDefault();
+    var FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY || REACT_APP_FORMSPREE_KEY;
 
     if (!validate()) {
       return;
@@ -2243,7 +2244,7 @@ function ContactForm() {
     });
     axios__WEBPACK_IMPORTED_MODULE_1___default()({
       method: "POST",
-      url: "https://formspree.io/f/".concat(process.env.REACT_APP_FORMSPREE_KEY),
+      url: "https://formspree.io/f/".concat(FORMSPREE_KEY),
       //process.env.REACT_APP_FORMSPREE_KEY
       data: inputs
     }).then(function (r) {

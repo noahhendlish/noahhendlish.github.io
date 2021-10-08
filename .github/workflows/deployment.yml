@@ -1,17 +1,9 @@
-name: Deployment #Name of the workflow
+name: deployment #Name of the workflow
 
 on: [push]
-# On which events this workflow should be triggered. We can use this as an array as well
-
-# on: [push, pull_request, issue]
-
-# We can specify events like this as well
-# on:
-#   pull_request:
-#     types: [opened, closed, reopened]
 
 jobs:
-    run-shell-command:         # Name of the job 1
+    test:         # Name of the job 1
         runs-on: ubuntu-latest # Selecting a GitHub Hosted Runner (Here selected an ubuntu machine)
 
         steps:                      # Automated Steps of the job
@@ -23,11 +15,13 @@ jobs:
                   node -v
                   npm -v
 
-    deploy:
+    deploy-secrets:
       runs-on: ubuntu-latest
       environment: github-pages
       steps:
             - name: define formspree key on env
+              with: # Set the secret as an input
+                REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
               env:
                   REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
               run: echo REACT_APP_FORMSPREE_KEY
