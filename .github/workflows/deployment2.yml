@@ -1,6 +1,6 @@
 name: deployment2
 
-#on: [push]
+on: [push]
 #ranches: [ main ]
 
 jobs:

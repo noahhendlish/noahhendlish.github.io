@@ -1,6 +1,6 @@
 name: deployment #Name of the workflow
 
-#on: [push]
+on: [push]
 #branches: [ main ]
 
 jobs:
