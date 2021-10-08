@@ -25,7 +25,6 @@ function Root() {
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.getElementById("main");
     ReactDOM.render(<Root/>, main);
-    console.log(process.env.REACT_APP_FORMSPREE_KEY);
 });
 
 /*

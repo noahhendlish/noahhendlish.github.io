@@ -41,7 +41,7 @@ function ContactForm() {
     };
     const handleOnSubmit = event => {
         event.preventDefault();
-        let FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY;
+        //let FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY;
         if (!validate()) {
             return;
         }
@@ -50,7 +50,7 @@ function ContactForm() {
         });
         axios({
                 method: "POST",
-                url: `https://formspree.io/f/${FORMSPREE_KEY}`, //process.env.REACT_APP_FORMSPREE_KEY
+                url: `https://formspree.io/f/${xoqybnlp}`, //process.env.REACT_APP_FORMSPREE_KEY
                 data: inputs
             })
             .then(r => {

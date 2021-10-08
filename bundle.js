@@ -2232,8 +2232,7 @@ function ContactForm() {
   };
 
   var handleOnSubmit = function handleOnSubmit(event) {
-    event.preventDefault();
-    var FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY;
+    event.preventDefault(); //let FORMSPREE_KEY = process.env.REACT_APP_FORMSPREE_KEY;
 
     if (!validate()) {
       return;
@@ -2244,7 +2243,7 @@ function ContactForm() {
     });
     axios__WEBPACK_IMPORTED_MODULE_1___default()({
       method: "POST",
-      url: "https://formspree.io/f/".concat(FORMSPREE_KEY),
+      url: "https://formspree.io/f/".concat(xoqybnlp),
       //process.env.REACT_APP_FORMSPREE_KEY
       data: inputs
     }).then(function (r) {
@@ -32484,7 +32483,6 @@ function Root() {
 document.addEventListener("DOMContentLoaded", function () {
   var main = document.getElementById("main");
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Root, null), main);
-  console.log(process.env.REACT_APP_FORMSPREE_KEY);
 });
 /*
 
