@@ -74,8 +74,6 @@ function ContactForm() {
             hasErrors |= errors[key];
             let $input = $(`.contact-form`).find(`#${key}`).parent();
             let $form = $('.needs-validation');
-            console.log($input[0]);
-            console.log($form[0]);
             $form.addClass('was-validated');
             $input.addClass('has-feedback');
             //form.checkValidity()
@@ -106,7 +104,6 @@ function ContactForm() {
         }
     };
     React.useEffect(() => {
-        console.log('pre');
           // Only perform interactive validation after submit
         if (Object.keys(fieldErrors).length > 0) {
             validate();

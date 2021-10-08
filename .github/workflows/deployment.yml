@@ -12,7 +12,7 @@ jobs:
       steps:
         - name: define formspree key on env
           run:
-            REACT_APP_FORMSPREE_KEY = ${{ secrets.REACT_APP_FORMSPREE_KEY }}
+            console.log(process.env.REACT_APP_FORMSPREE_KEY);
 
 
 

@@ -2284,8 +2284,6 @@ function ContactForm() {
       hasErrors |= errors[key];
       var $input = $(".contact-form").find("#".concat(key)).parent();
       var $form = $('.needs-validation');
-      console.log($input[0]);
-      console.log($form[0]);
       $form.addClass('was-validated');
       $input.addClass('has-feedback'); //form.checkValidity()
 
@@ -2319,8 +2317,7 @@ function ContactForm() {
   };
 
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
-    console.log('pre'); // Only perform interactive validation after submit
-
+    // Only perform interactive validation after submit
     if (Object.keys(fieldErrors).length > 0) {
       validate();
     }
@@ -32487,6 +32484,7 @@ function Root() {
 document.addEventListener("DOMContentLoaded", function () {
   var main = document.getElementById("main");
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Root, null), main);
+  console.log(process.env.REACT_APP_FORMSPREE_KEY);
 });
 /*
 
