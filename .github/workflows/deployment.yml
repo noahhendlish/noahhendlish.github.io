@@ -1,0 +1,37 @@
+name: Deployment #Name of the workflow
+
+on: [push]
+# On which events this workflow should be triggered. We can use this as an array as well
+
+# on: [push, pull_request, issue]
+
+# We can specify events like this as well
+# on:
+#   pull_request:
+#     types: [opened, closed, reopened]
+
+jobs:
+    run-shell-command:         # Name of the job 1
+        runs-on: ubuntu-latest # Selecting a GitHub Hosted Runner (Here selected an ubuntu machine)
+
+        steps:                      # Automated Steps of the job
+            - name: echo a string   # Name of the Step 1 (Optional)
+              run: echo "Hello"     # command of the step 1
+
+            - name: multiline commands  # Name of the Step 2
+              run: |                    # Multiline commands of the step 2
+                  node -v
+                  npm -v
+
+            - name: define formspree key on env
+              env:
+                REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
+
+    deploy:
+      runs-on: ubuntu-latest
+      environment: github-pages
+      steps:
+        - name: deploy
+        env:
+                REACT_APP_FORMSPREE_KEY: ${{ secrets.REACT_APP_FORMSPREE_KEY }}
+        run: echo REACT_APP_FORMSPREE_KEY
