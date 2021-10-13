@@ -6,6 +6,8 @@ reCaptchaV3.txt
 .env
 API_KEYS.json
 /test
+test.js
+TODO.txt
 #node_modules
 #!node_modules/bootstrap
 #!node_modules/bootstrap-icons

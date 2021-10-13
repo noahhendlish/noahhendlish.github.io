@@ -1,23 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import 'bootstrap';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-import NavBar from './navbar'
-import ContactForm from './contact-form'
-import ProjectsModule from './portfolio/projects-module';
-//require('dotenv').config();
+import Footer from './footer'
+import Nav from './nav/fixed-navbar';
 
 
+//import NavBar from './navbar';
+//import Alert from './alerts/alert';
+//import ContactForm from './contact-forms/contact-form'
+//import ProjectsModule from './portfolio/projects-module';
+import TempFrontPage from './temp-front-page';
+//import "tailwindcss/tailwind.css"
+import {ThemeProvider} from 'styled-components';
+//https://getbootstrap.com/docs/5.0/customize/color/
+import Theme from './../styled-components/theme';
 function Root() {
     return(
-        <div>
-            <div className="py-4 px-5 mx-auto content">
-            <h1 className = 'title'>Noah Hendlish</h1>
-                <NavBar/>
-                <ContactForm/>
-                <ProjectsModule/>
-            </div>
+        <div className = 'root-component' >
+            <ThemeProvider theme={Theme}>
+
+                <main role="main" className="">
+                    <TempFrontPage/>
+                </main>
+                <Footer/>
+            </ThemeProvider>
         </div>
     );
 }
@@ -27,6 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(<Root/>, main);
 });
 
-/*
-
-*/

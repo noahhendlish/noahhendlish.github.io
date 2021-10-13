@@ -1,0 +1,140 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//https://www.a11yproject.com/
+//https://github.com/squizlabs/HTML_CodeSniffer
+//https://www.tpgi.com/color-contrast-checker/
+//@import "bootstrap";
+//https://github.com/webpack-contrib/sass-loader
+//@import "~bootstrap"; //from node modules
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+    $yellow: #e9c46aff;
+      $orange: #e86a58ff;
+      $green: #1a6a62ff;
+      $darkblue: #023047ff;
+      $blue: #264653ff;
+      $lightblue: #838B9B;
+      $darkgray: #3b373aff;
+      $darkergray: rgb(34, 32, 35);
+      $gray: #4d494cff;
+      $lightgray: #9e9c9bff;
+      $white: #eeeeeeff;
+
+$body-bg: $white;
+$body-color: $darkergray;
+$primary: $blue;
+$btn-primary: $blue;
+$danger: $orange;
+$success: $green;
+$secondary: $darkblue;
+$info: $lightblue;
+$warning: $yellow;
+$light: $lightgray;
+$dark: $darkergray;
+
+//
+// Bring in Bootstrap
+// Option 1
+// Import all of Bootstrap's CSS
+//@import "bootstrap/scss/bootstrap";
+
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+
+//$enable-gradients: true;
+//$enable-shadows: true;
+
+// Customize some defaults
+//$body-color: #333;
+//$body-bg: #fff;
+//$border-radius: .4rem;
+//$success: #7952b3;
+//$font-stack: Helvetica,sans-serif;
+//$primary-color: rgb(205, 24, 24);
+
+
+/*
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+//@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+//
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+//@import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+//@import "bootstrap/scss/tooltip";
+//@import "bootstrap/scss/popover";
+//@import "bootstrap/scss/carousel";
+//@import "bootstrap/scss/spinners";
+//@import "bootstrap/scss/utilities";
+//@import "bootstrap/scss/print";
+*/
+
+//
+// Custom styles
+//
+
+//@import "icon-list";
+
+/*body {
+  padding: 3rem 1.5rem;
+  //font: 100% $font-stack;
+  //color: $primary-color;
+}*/
+
+// Style Bootstrap icons
+/*.bi {
+  fill: currentColor;
+}*/

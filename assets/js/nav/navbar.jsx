@@ -1,10 +1,10 @@
 import React from 'react';
 const NavBar = function(){
     return(
-        <div>
-            <div className="row px-1">
+        <div className = ''>
+            <div className="row">
                 <div className="col-sm-6 nav">
-                    <nav className='nav-sidebar'>
+                    <nav className=''>
                         <h3>Nav</h3>
                         <ul className = 'nav-list'>
                             <li>

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "typing.css",
+	"sources": [
+		"../../scss/typing.scss"
+	],
+	"sourcesContent": [
+		"/*.typed-text {\n  font-size: 90px;\n  white-space: nowrap;\n  overflow: hidden;\n  animation: typewriter 2s steps(13) infinite alternate, blink 800ms steps(13) infinite normal;\n  border-right: 1px solid black;\n  width: max-content;\n}*/\n.typed-text {\n    font-size: 2em;\n    margin: 0;\n    font-family: \"Courier New\";\n\n    &:after {\n        content: \"|\";\n        animation: blink 500ms linear infinite alternate;\n    }\n}\n\n.var-highlight {\n    color: #C0AD60;\n}\n\n.string-highlight {\n    color: rgba(253, 149, 90, 0.8);\n}\n\n@-webkit-keyframes blink {\n    0% {\n        opacity: 0;\n    }\n\n    100% {\n        opacity: 1;\n    }\n}\n\n@-moz-keyframes blink {\n    0% {\n        opacity: 0;\n    }\n\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes blink {\n    0% {\n        opacity: 0;\n    }\n\n    100% {\n        opacity: 1;\n    }\n}"
+	],
+	"names": [],
+	"mappings": "AAQA,AAAA,WAAW,AAAC,CACR,SAAS,CAAE,GAAG,CACd,MAAM,CAAE,CAAC,CACT,WAAW,CAAE,aAAa,CAM7B,AATD,AAKI,WALO,AAKN,MAAM,AAAC,CACJ,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,qCAAqC,CACnD,AAGL,AAAA,cAAc,AAAC,CACX,KAAK,CAAE,OAAO,CACjB,AAED,AAAA,iBAAiB,AAAC,CACd,KAAK,CAAE,oBAAuB,CACjC,AAED,kBAAkB,CAAlB,KAAkB,CACd,EAAE,CACE,OAAO,CAAE,CAAC,CAGd,IAAI,CACA,OAAO,CAAE,CAAC,EAIlB,eAAe,CAAf,KAAe,CACX,EAAE,CACE,OAAO,CAAE,CAAC,CAGd,IAAI,CACA,OAAO,CAAE,CAAC,EAIlB,UAAU,CAAV,KAAU,CACN,EAAE,CACE,OAAO,CAAE,CAAC,CAGd,IAAI,CACA,OAAO,CAAE,CAAC"
+}

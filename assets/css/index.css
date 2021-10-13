@@ -1,0 +1,10 @@
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.root-component {
+  @apply bg-gray-100 text-gray-600 hover: text-gray-900 dark:text-gray-200 dark:hover:text-gray-50;
+
+  .test {
+    @apply hover: text-green-800;
+  }
+}*/
