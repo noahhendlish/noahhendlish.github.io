@@ -1,0 +1,75 @@
+.react-select-container {
+
+
+    .react-select__multi-value,
+    .react-select__multi-value__label,
+    .react-select__multi-value__remove {
+        background-color: var(--theme-ui-colors-reactSelectOptionHover);
+        color: var(--theme-ui-colors-text);
+    }
+    .react-select__multi-value__remove{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .react-select__input-container{
+    }
+    .react-select__value-container {
+        //background: pink;
+        color: var(--theme-ui-colors-text);
+        &:hover {
+            cursor: pointer;
+        }
+        border-color: var(--theme-ui-colors-inputContainerBorder);
+    }
+    .react-select__control {
+        background-color: var(--theme-ui-colors-inputContainerBg);
+        border-color: var(--theme-ui-colors-inputContainerBorder);
+        //border-color: var(--theme-ui-colors-gray-1);
+        transition: none;
+        &:hover {
+            //border-color: var(--theme-ui-colors-reactSelectOptionHover);
+            //cursor: pointer;
+            //border-color: var(--theme-ui-colors-gray-2);
+            //box-shadow: 0.01em 0.01em 0.01em 0.01em var(--theme-ui-colors-grayOutline);
+        }
+        &:focus{
+            //box-shadow: 0.01em 0.01em 0.01em 0.01em green; //var(--theme-ui-colors-gray-3);
+        }
+        &:active{
+            //border-color: var(--theme-ui-colors-gray-4);
+        }
+    }
+    .react-select__menu {
+        background-color: var(--theme-ui-colors-inputContainerBg);
+        .react-select__menu-list{
+        }
+    }
+    .react-select__option {
+        &:hover {
+             cursor: pointer;
+        }
+    }
+   .react-select__indicator {
+       //background-color: var(--theme-ui-colors-grayOutline);
+       //color: var(--theme-ui-gray-4)
+       color: var(--theme-ui-colors-inputContainerFocusOutline);
+
+       &:hover {
+           color: var(--theme-ui-colors-reactSelectOptionHover);
+           cursor: pointer;
+       }
+
+       &:focus {
+           color: var(--theme-ui-colors-reactSelectOptionFocus);
+       }
+        .react-select__clear-indicator {}
+        .react-select__indicator-separator {}
+
+    }
+
+    .react-select__placeholder,
+    .react-select__single-value {
+        color: var(--theme-ui-colors-text);
+    }
+}

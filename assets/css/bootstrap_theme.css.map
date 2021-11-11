@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "bootstrap_theme.css",
+	"sources": [
+		"../../scss/bootstrap_theme.scss"
+	],
+	"sourcesContent": [
+		"//@import \"bootstrap_config\";\n//@import \"bootstrap/scss/bootstrap\";\n\n//https://github.com/csstools/precss\n\n$yellow: #e9c46aff;\n$orange: #e86a58ff;\n$green: #1a6a62ff;\n$dark-blue: #023047ff;\n$blue: #264653ff;\n$light-blue: rgb(69, 120, 141);\n$dark-gray: #3b373aff;\n$darker-gray: rgb(34, 32, 35);\n$gray: #4d494cff;\n$light-gray: #9e9c9bff;\n$white: #eeeeeeff;\n\n.main-content {\n    padding-bottom: 60px;\n    margin-top: 60px;\n}\n\n.email-field-error-msg,\n.name-field-error-msg,\n.message-field-error-msg {\n    margin: 0;\n    padding: 0 2%;\n    display: flex;\n    flex: auto;\n    justify-content: flex-end;\n    align-items: flex-start;\n    font-size: 0.7em;\n    //color: $white;\n}\n\n.form-error-message {\n    min-height: 5px;\n    position: relative;\n    height: 100%;\n}\n\n.invalid-tooltip {\n    right: 0px;\n}\n\n.form-group {\n    margin-bottom: 4%;\n}\n\n.message-form-group {\n    margin-bottom: 8%;\n}\n\n.form-control {}\n\nbody>.container {\n    padding-top: 60px;\n}"
+	],
+	"names": [],
+	"mappings": "AAiBA,AAAA,aAAa,AAAC,CACV,cAAc,CAAE,IAAI,CACpB,UAAU,CAAE,IAAI,CACnB,AAED,AAAA,sBAAsB,CACtB,qBAAqB,CACrB,wBAAwB,AAAC,CACrB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,IAAI,CACb,OAAO,CAAE,IAAI,CACb,IAAI,CAAE,IAAI,CACV,eAAe,CAAE,QAAQ,CACzB,WAAW,CAAE,UAAU,CACvB,SAAS,CAAE,KAAK,CAEnB,AAED,AAAA,mBAAmB,AAAC,CAChB,UAAU,CAAE,GAAG,CACf,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,IAAI,CACf,AAED,AAAA,gBAAgB,AAAC,CACb,KAAK,CAAE,GAAG,CACb,AAED,AAAA,WAAW,AAAC,CACR,aAAa,CAAE,EAAE,CACpB,AAED,AAAA,mBAAmB,AAAC,CAChB,aAAa,CAAE,EAAE,CACpB,AAID,AAAA,IAAI,CAAC,UAAU,AAAC,CACZ,WAAW,CAAE,IAAI,CACpB"
+}

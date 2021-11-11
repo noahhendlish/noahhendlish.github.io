@@ -1,38 +1,63 @@
-import React from 'react';
-import ContactForm from './contact-forms/contact-form'
-import styled from 'styled-components';
+/** @jsx jsx */
 import {
-    withTheme
-} from 'styled-components';
-//import FixedNavBar from './nav/fixed-navbar';
-const Title = styled.h1 `
-  font-size: 80px;
-  text-align: center;
-  color: ${props => props.theme.color.blue || "blue"};
-`;
+    Flex, Box, jsx, Divider
+} from 'theme-ui'
 
+//import React from 'react';
+import ContactForm from './contact-forms/contact-form'
+//import styled from 'styled-components';
+//import TempSection from './temp-section';
+import Skills from './main-body/skills/skills';
+import About from './main-body/about/about';
+//import SlidingAnimation from './slidingAnimation';
+import TempArt from './temp-art';
+//<TempSection name = "About"/>
+import ProjectPortfolio from './main-body/portfolio/project-portfolio';
 const TempFrontPage = function () {
-    //container text-center cover-container d-flex h-100 p-3 mx-auto flex-column justify-center
+    //
     return(
-        <div>
-
-            <div className = 'test' >
-                <Title>Noah Hendlish </Title>
-            </div>
+        <Flex sx={{flexDirection:'column', width: '100%', justifyContent: 'center'}} id="main-content-container">
 
 
+            <TempArt/>
+        
+            <Divider/>
 
-            <div className = 'center'>
+            <Box id = "about">
+                <About/>
+
+            </Box>
+
+            <Divider/>
+
+            <Box id = "skills">
+                <Skills/>
+            </Box>
+
+            <Divider/>
+        
+            <Box id = "projects">
+                <ProjectPortfolio/>
+            </Box>
+
+            <Divider/>
+            <Box id = "experience">
+            </Box>
+            <Box id = "resume">
+            </Box>
+
+            <Box id = 'contact'>
                 <ContactForm/>
-            </div>
-        </div>
+            </Box>
+
+        </Flex>
     );
 };
 export default TempFrontPage;
 //withTheme
 //https://www.elian.codes/blog/using-tailwind-with-sass-preprocessor/
-let stack = {
+/*let stack = {
     frontend:{},
     backend:{},
-}
+}*/
 

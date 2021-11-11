@@ -9,9 +9,9 @@ API_KEYS.json
 test.js
 TODO.txt
 #node_modules
-#!node_modules/bootstrap
-#!node_modules/bootstrap-icons
-#!node_modules/bootstrap-icons
+
+
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -26,6 +26,8 @@ TODO.txt
 /build
 
 # misc
+/assets/js/other
+
 .DS_Store
 .env.local
 .env.development.local

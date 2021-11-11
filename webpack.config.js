@@ -25,6 +25,13 @@ function tryResolveScss(url, sourceFilename) {
         tryResolve_(path.join(path.dirname(normalizedUrl), `_${path.basename(normalizedUrl)}`),
             sourceFilename);
 }
+/*function tryResolvePng(url, sourceFilename) {
+    // Support omission of .scss and leading _
+    const normalizedUrl = url.endsWith('.png') ? url : `${url}.png`;
+    return tryResolve_(normalizedUrl, sourceFilename) ||
+        tryResolve_(path.join(path.dirname(normalizedUrl), `_${path.basename(normalizedUrl)}`),
+            sourceFilename);
+}*/
 
 function materialImporter(url, prev) {
     if (url.startsWith('@material')) {
@@ -39,6 +46,7 @@ function materialImporter(url, prev) {
 }
 
 module.exports = {
+    target: 'node',
     entry: ['./assets/js/index.jsx'],
     output: {
         path: path.resolve(__dirname),
@@ -51,8 +59,23 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/env', '@babel/react'],
+                        presets: ['@babel/env', '@babel/react'], //'astroturf/loader'
+                            /* '@babel/react',
+                            {
+                                importSource: 'theme-ui', // or '@theme-ui/core'
+                                runtime: 'automatic',
+                                throwIfNamespace: false,
+                            },
+                        ]],*/
                         //plugins: ['babel-plugin-styled-components'] //add babel-plugin-styled-components
+                        /*plugins: [
+                                ["prismjs", {
+                                    "languages": ["javascript", "css", "markup"],
+                                    "plugis": ["line-numbers"],
+                                    "theme": "twilight",
+                                    "css": true
+                                }]
+                            ]*/
                     }
                 },
             },
@@ -75,22 +98,11 @@ module.exports = {
                         //sourceMap: true,
                     }
 
-                },
-                {
-                    loader: 'postcss-loader', // Run postcss actions
-                    options: {
-                        sourceMap: true,
-                        plugins: function () { // postcss plugins, can be exported to postcss.config.js
-                            return [require('precss'),
-                            require('autoprefixer'), require('tailwindcss')
-                            ];
-                        }
-                        }
-                },
+                }, 'postcss-loader', // Run postcss actions
                 {
                     loader: 'sass-loader', // compiles Sass to CSS,
                     options: {
-                        sourceMap: true,
+                        //sourceMap: true,
                         // Prefer Dart Sass
                         implementation: require('sass'),
 
@@ -107,13 +119,47 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader', 'postcss-loader']
-            }
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+                //css modules:
+                //use:  'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+            },
+            {
+                test: /\.png/,
+                type: 'asset/resource'
+            },
+             {
+                 test: /\.(gif|png|jpg|jpe?g)$/,
+                 use: [{
+                     loader: 'file-loader',
+                     options: {
+                         name: '[name].[ext]',
+                         outputPath: 'assets/images/'
+                     }
+                 }, {loader: 'url-loader'}],
+                 type: 'javascript/auto',
+            },
+            /*{
+                test: /\.(png|jpe?g|gif)$/i,
+                use: {loader: 'url-loader'},
+                type: 'javascript/auto',
+                options: {
+
+                    //filename: './bundle.js',
+                    outputPath: path.resolve(__dirname),
+                },
+            }*/
+             {
+                 test: /\.html$/i,
+                 loader: "html-loader",
+             },
     ]
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.js', '.jsx', '*']
+        extensions: ['.js', '.jsx', '*'],
+        fallback: {
+            path: require.resolve("path-browserify"),
+        }
     },
     /*plugins: [
         new HtmlWebPackPlugin({

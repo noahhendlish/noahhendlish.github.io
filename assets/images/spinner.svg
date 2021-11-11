@@ -11,3 +11,4 @@
         <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1440ms" repeatCount="indefinite"></animateTransform>
     </g>
 </svg>
+

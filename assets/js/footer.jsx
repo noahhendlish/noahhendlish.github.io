@@ -1,56 +1,76 @@
+//import { darken } from '@theme-ui/color';
 import React from 'react';
-import styled from 'styled-components';
+import {Text, Link, Flex, Container, IconButton} from 'theme-ui';
 
-//import FixedNavBar from './nav/fixed-navbar';
-const FooterWrapper = styled.footer `
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100% ;
-    height: 40px;
-    background-color:${props => props.theme.color.darkblue || "darkblue"};
-    color: ${props => props.theme.color.white || "white"};
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-`;
 
-const Copyright = styled.div `
-    font-size: 10px;
-
-`;
-const FooterLinks = styled.div `
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`;
-const FooterLink = styled.a `
-    padding: 0 10px;
-    color: white;
-    &:hover {
-        color: ${props => props.theme.color.lightblue || "lightblue"};
-    }
-`;
-const Footer = function(){
-
+const Footer = function(props){
+    const copyright = "Copyright(c) 2020 Noah Hendlish";
+    const footerLinks = [
+        {
+            name: "LinkedIn",
+            href: "https://www.linkedin.com/in/noahhendlish",
+            icon: <i className="fab fa-linkedin"></i>
+        },{
+            name: "Github",
+            href: "https://www.github.com/noahhendlish",
+            icon: <i className="fab fa-github"></i>
+        },
+        {
+            name: "StackOverflow",
+            href: "https://www.stackoverflow.com/users/15286870/noah-hendlish",
+            icon: <i className = "fab fa-stack-overflow"></i>
+        },
+        {
+            name: "AngelList",
+            href: "https://www.angel.co/u/noah-hendlish",
+            icon: <i className="fab fa-angellist"></i>
+        },
+        {
+            name: "Email",
+            href: "mailto:noahsjhendlish@gmail.com",
+            icon: <i className="fas fa-envelope"></i>
+        }
+    ];
     return(
-        <div className = ''>
-            <FooterWrapper>
-                    <Copyright>
-                        Copyright(c) 2020 Noah Hendlish
-                    </Copyright>
-                    <FooterLinks>
-                        <FooterLink href ="https://www.linkedin.com/in/noahhendlish" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></FooterLink>
-                        <FooterLink href ="https://github.com/noahhendlish" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></FooterLink>
-                        <FooterLink href ="https://stackoverflow.com/users/15286870/noah-hendlish" target="_blank" rel="noopener noreferrer"><i className="fab fa-stack-overflow"></i></FooterLink>
-                        <FooterLink href ="mailto:noahsjhendlish@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope"></i></FooterLink>
-                    </FooterLinks>
-            </FooterWrapper>
-        </div>
+            <Flex as = "footer" {...props} sx={{
+                bg: 'var(--theme-ui-colors-footerBg)',
+                color: "var(--theme-ui-colors-text)",
+                //variant: 'styles.footer',
+                position: "fixed",
+                left: 0,
+                bottom: 0,
+                width: "100%",
+                maxheight: "40px",
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                px: 10,
+                zIndex: 10000,
+                marginTop: '40px'
+                }}>
+
+                        <Text sx={{
+                            variant:'text.footer',
+                            fontSize: 0,
+                            fontWeight: 'light',
+                            minWidth: 'fit-content'}}>
+                            {copyright}
+                        </Text>
+                        <Container sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "flex-end",
+                            alignItems: 'center',
+                            py: 1
+                        }}>
+                        {footerLinks.map( (link) => (<IconButton key={link.name} sx={{variant: 'buttons.footer'}}><Link sx={{variant:'links.footer'}} href ={link.href} target="_blank" rel="noopener noreferrer" title = {link.name || ''}>{link.icon}</Link></IconButton>))}
+                        </Container>
+            </Flex>
+
 
     );
 };
 export default Footer;
+

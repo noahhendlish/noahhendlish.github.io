@@ -1,53 +1,50 @@
-@import "bootstrap_config";
-@import "bootstrap/scss/bootstrap";
-
-//https://github.com/csstools/precss
-
-$yellow: #e9c46aff;
-$orange: #e86a58ff;
-$green: #1a6a62ff;
-$dark-blue: #023047ff;
-$blue: #264653ff;
-$light-blue: rgb(69, 120, 141);
-$dark-gray: #3b373aff;
-$darker-gray: rgb(34, 32, 35);
-$gray: #4d494cff;
-$light-gray: #9e9c9bff;
-$white: #eeeeeeff;
-
-.main-content {
-  padding-bottom: 60px;
-  margin-top: 60px;
+.body{
+  height: 100vh;
+  width: 100vw;
 }
-.email-field-error-msg,
-.name-field-error-msg,
-.message-field-error-msg {
-  margin: 0;
-  padding: 0 2%;
-  display: flex;
-  flex: auto;
-  justify-content: flex-end;
-  align-items: flex-start;
-  font-size: 0.7em;
-  //color: $white;
-}
-.form-error-message{
-  min-height: 5px;
-  position: relative;
+.textarea{
+  resize: none;
   height: 100%;
+  width: 100%;
 }
-.invalid-tooltip{
-  right: 0px;
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-.form-group{
-  margin-bottom: 4%;
+  
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus
+{
+  color: var(--theme-ui-colors-text);
+  -webkit-text-fill-color: var(--theme-ui-colors-text);
+  //-webkit-
+  //background-color: var(--theme-ui-colors-text);
+  //box-shadow:0 0 0px 1px #000 inset;
+  //-webkit-box-shadow: 0 0 0px 1px #000 inset;
+  //transition: background-color 5000s ease-in-out 0s;
 }
-.message-form-group{
-  margin-bottom: 8%;
-}
-.form-control{
-}
+//select:-webkit-autofill,
+//select:-webkit-autofill:hover,
+//select:-webkit-autofill:focus
 
-body>.container{
-   padding-top: 60px;
+.about-list {
+  list-style-position: outside;
+  padding-inline-start: 12px;
+}
+.about-list li::marker {
+  content: "\f192"; //f111, f054, f0c8
+  font-family: "Font Awesome 5 Free";
+  //padding: 0 10px 0 0;
+  //text-indent: 5px !important;
+
+}
+.about-list > li {
+  padding-left: 6px;
 }

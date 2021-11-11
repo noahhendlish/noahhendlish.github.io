@@ -1,8 +1,10 @@
 import React from 'react';
-const FormAlert = function(props){
+import PropTypes from 'prop-types';
+const Alert = function(props){
+
     let alertType = props.alertType ||  'secondary'
     return(
-        <div className = 'form-alert alert-container'>
+        <div className = 'alert-container'>
             <div className= {`alert alert-dismissible fade show alert-${alertType}`} role="alert">
                     {props.msg}
             </div>
@@ -10,7 +12,12 @@ const FormAlert = function(props){
     );
 };
 
+ Alert.propTypes = {
+     msg: PropTypes.string.isRequired,
+     alertType: PropTypes.string.isRequired
+ };
+
 //https://getbootstrap.com/docs/4.0/components/alerts/
 //$('.alert').alert()
 
-export default FormAlert;
+export default Alert;
